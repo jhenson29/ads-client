@@ -4,6 +4,8 @@
   "description": "Unofficial Node.js library for connecting to Beckhoff TwinCAT automation systems using ADS protocol",
   "main": "./src/ads-client.js",
   "scripts": {
+    "build": "npm run build-clean && tsc",
+    "build-clean": "rm -rf ./dist",
     "test": "echo \"Error: no test specified\" && exit 1",
     "generate-docs": "jsdoc ./src/ads-client.js ./README.md -c ./jsdoc-conf.json -d ./docs/ -t ./node_modules/docdash/"
   },
@@ -38,8 +40,10 @@
     "long": "^4.0.0"
   },
   "devDependencies": {
+    "@types/node": "^14.14.10",
     "docdash": "^1.2.0",
-    "jsdoc": "^3.6.4"
+    "jsdoc": "^3.6.4",
+    "typescript": "^4.1.2"
   },
   "files": [
     "src/",
